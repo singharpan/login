@@ -7,6 +7,15 @@ class Login extends Component {
     loggedIn: false,
   };
 
+  onChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  //[] is used for the reusablity of code
+  //for this input "name" should be same as state name
+
   render() {
     return (
       <React.Fragment>
@@ -17,6 +26,7 @@ class Login extends Component {
             placeholder="username"
             name="username"
             value={this.state.username}
+            onChange={this.onChange}
           />
 
           <input
@@ -24,8 +34,9 @@ class Login extends Component {
             placeholder="password"
             name="password"
             value={this.state.password}
+            onChange={this.onChange}
           />
-          <button>Submit</button>
+          <input type="submit" />
         </form>
       </React.Fragment>
     );
