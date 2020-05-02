@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./App.css";
-import List from "./listcomponent";
-import NavBar from "./navbar";
-import About from "./about";
-import Contact from "./contact";
+// import List from "./listcomponent";
+// import NavBar from "./navbar";
+// import About from "./about";
+// import Contact from "./contact";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./login";
 import Logout from "./logout";

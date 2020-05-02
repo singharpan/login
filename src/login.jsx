@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 
 class Login extends Component {
   state = {
@@ -13,12 +14,23 @@ class Login extends Component {
     });
   };
 
-  onSubmit = (e) => {
+  submitForm = (e) => {
     e.preventDefault();
+
     const { username, password } = this.state;
+
+    if (username === "A" && password === "B") {
+      this.setState({
+        loggedIn: true,
+      });
+    }
   };
 
   render() {
+    console.log(this.state.loggedIn);
+    if (this.state.loggedIn) {
+      return <Redirect to="/admin" />;
+    }
     return (
       <React.Fragment>
         <h1>Login</h1>
