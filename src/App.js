@@ -19,9 +19,10 @@ function App() {
         <Route path="/admin" component={Admin} />
         <Route path="/" component={Login} />
         <Route path="/logout" component={Logout} />
-        <Route path="/list" component={List} />
+
+        {/* <Route path="/list" component={List} />
         <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/contact" component={Contact} /> */}
       </BrowserRouter>
     </div>
   );

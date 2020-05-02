@@ -13,8 +13,10 @@ class Login extends Component {
     });
   };
 
-  //[] is used for the reusablity of code
-  //for this input "name" should be same as state name
+  onSubmit = (e) => {
+    e.preventDefault();
+    const { username, password } = this.state;
+  };
 
   render() {
     return (
