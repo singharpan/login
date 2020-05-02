@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 
+//For authentication we have to save token in local storage
+
 class Login extends Component {
   state = {
     username: "",
@@ -13,13 +15,14 @@ class Login extends Component {
       [e.target.name]: e.target.value,
     });
   };
-
+  //token can be any random string
   submitForm = (e) => {
     e.preventDefault();
 
     const { username, password } = this.state;
 
     if (username === "A" && password === "B") {
+      localStorage.setItem("token", "sdfghjjkkdfhgfkgjhbn");
       this.setState({
         loggedIn: true,
       });
